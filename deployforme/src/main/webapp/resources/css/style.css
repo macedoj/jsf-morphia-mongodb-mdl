@@ -28,7 +28,7 @@ body{
     width:100%;
     background-size:cover;
     display: inline;
-    padding: 5%;
+    padding: 3%;
 }
 
 .section-name{
@@ -84,7 +84,11 @@ body{
 }
 
 .space{
-    padding-top: 3%;
+    padding-top: 2%;
+}
+
+.flip-clock, .flip-clock-wrapper{
+    justify-content: space-around;
 }
 
 #btnshowsubscribe{
