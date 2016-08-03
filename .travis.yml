@@ -1,0 +1,17 @@
+language: java
+script: mvn test -f ./deployforme/pom.xml
+jdk:
+  - oraclejdk8
+  - openjdk7
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t af854716-72bf-421f-bf39-7ad1dbd80c81
+deploy:
+  - provider: s3
+  - provider: codedeploy
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  bucket: "S3 Bucket"
+  key: latest/deployforme.zip
+  application: deployforme
+  deployment_group: Group_Deployforme
+  detect_encoding: true
