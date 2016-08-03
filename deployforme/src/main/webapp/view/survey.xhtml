@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xml:lang="pt-br"
+      lang="pt-br">
+    <h:head>
+        <title>DeployFor.Me - Pesquisa de opinião</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Language" content="pt-br" />
+        <meta name="description" content="DeployFor.Me by Juliano Macedo" />
+        <meta name="author" content="Juliano Macedo" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <f:facet name="last">
+            <h:outputStylesheet library="css" name="sweetalert.css" />
+            <h:outputStylesheet library="css" name="material.min.css" />
+            <h:outputStylesheet library="css" name="font-awesome.min.css" />
+            <h:outputStylesheet library="css" name="material-icons.css" />
+            <h:outputStylesheet library="css" name="style.css" />
+        </f:facet>
+
+        <h:outputScript library="js" name="jquery-3.1.0.min.js" />
+        <h:outputScript library="js" name="sweetalert.min.js" />
+        <h:outputScript library="js" name="material.min.js" />
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#formsurvey").trigger("reset");
+
+                    var subscriptionOk = #{surveyBean.answerSavedOk};
+                if (subscriptionOk) {
+                    swal("Tudo certo!", "Guardamos a sua opinião com todo o carinho, muito obrigado!", "success");
+                }
+            });
+        </script>
+        <style>
+            body {
+                background-image: url("../resources/img/background.jpg");
+                background-size: cover;
+                background-repeat: no-repeat; 
+                background-attachment:fixed;
+                min-height: available;
+            }
+        </style>
+
+    </h:head>
+    <h:body>
+        <section class="section-style">
+            <article>
+                <header>
+                    <h1 class="site-title">
+                        DeployFor.Me
+                    </h1>
+                </header>
+            </article>
+        </section>
+
+        <div class="mdl-grid">
+            <!--<div class="mdl-cell mdl-cell-*-2-col mdl-cell-*-4-col-phone"></div>-->
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+                <main>
+                    <div class="mdl-shadow--6dp">
+                        <div class="mdl-card__title mdl-color--primary mdl-color-text--white center-space-around">
+                            <i class="material-icons md-48">question_answer</i> 
+                            <h3 class="mdl-card__title-text">Sua opinião é fundamental para nós!</h3> 
+                            <i class="material-icons md-48">question_answer</i>
+                        </div>
+                    </div>
+                    <h:form id="formsurvey" style="background-color: #fff; color: #212121; padding: 5%;">
+                        <div>
+                            <div>
+                                <h4>1. Qual a sua profissão ou cargo? </h4>
+                                <h:selectOneRadio id="radioquestion1"
+                                                  layout="pageDirection"
+                                                  value="#{surveyBean.answer1}"
+                                                  a:required="true"
+                                                  >
+                                    <f:selectItem itemValue="A" itemLabel="Estudante"/>
+                                    <f:selectItem itemValue="B" itemLabel="Engenheiro"/>
+                                    <f:selectItem itemValue="C" itemLabel="Diretor"/>
+                                    <f:selectItem itemValue="D" itemLabel="CIO, CTOs, etc"/>
+                                    <f:selectItem itemValue="E" itemLabel="Outros"/>
+                                </h:selectOneRadio>
+                            </div>
+
+                            <div>
+                                <h4>2. Qual aspecto você considera mais importante?  </h4>
+                                <h:selectOneRadio id="radioquestion2"
+                                                  layout="pageDirection"
+                                                  value="#{surveyBean.answer2}"
+                                                  a:required="true">
+                                    <f:selectItem itemValue="A" itemLabel="Disponibilidade (24/7)"/>
+                                    <f:selectItem itemValue="B" itemLabel="Performance"/>
+                                    <f:selectItem itemValue="C" itemLabel="Preço"/>
+                                    <f:selectItem itemValue="D" itemLabel="Localidade dos Servidores (EUA, BR, UE, etc.)"/>
+                                    <f:selectItem itemValue="E" itemLabel="Outras"/>
+                                </h:selectOneRadio>
+                            </div>                
+
+                            <div>
+                                <h4>3. O que você mais deseja em um sistema de Deploy? </h4>
+                                <h:selectOneRadio id="radioquestion3"
+                                                  layout="pageDirection"
+                                                  value="#{surveyBean.answer3}"
+                                                  a:required="true">
+                                    <f:selectItem itemValue="A" itemLabel="Performance de disco (Gravação/Leitura)"/>
+                                    <f:selectItem itemValue="B" itemLabel="Performance de Rede"/>
+                                    <f:selectItem itemValue="C" itemLabel="Performance de Processador e/ou Memória"/>
+                                    <f:selectItem itemValue="D" itemLabel="Maior espaço em disco"/>
+                                    <f:selectItem itemValue="E" itemLabel="Mais opções para customizar todo o ambiente"/>
+                                </h:selectOneRadio>
+                            </div>                
+
+                            <div>
+                                <h4>4. Qual faixa de preço você considera justa para um sistema de Deploy? </h4>
+                                <h:selectOneRadio id="radioquestion4"
+                                                  layout="pageDirection"
+                                                  value="#{surveyBean.answer4}"
+                                                  a:required="true">
+                                    <f:selectItem itemValue="A" itemLabel="10 até 20 R$/Mês"/>
+                                    <f:selectItem itemValue="B" itemLabel="20 até 30 R$/Mês"/>
+                                    <f:selectItem itemValue="C" itemLabel="30 até 40 R$/Mês"/>
+                                    <f:selectItem itemValue="D" itemLabel="40 até 50 R$/Mês"/>
+                                    <f:selectItem itemValue="E" itemLabel="50 ou mais R$/Mês"/>
+                                </h:selectOneRadio>
+                            </div>               
+                            <div id="surveyheader">
+                                <h:commandButton class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+                                                 action="#{surveyBean.saveSurveyAnswers()}" 
+                                                 title="Clique aqui para submeter sua opinião :)"
+                                                 value="Submeter">
+                                </h:commandButton>
+                            </div>
+                            <hr/>
+                        </div>
+                    </h:form>
+                </main>
+            </div>
+            <div class="mdl-layout-spacer"></div>
+            <!--<div class="mdl-cell mdl-cell-*-2-col mdl-cell-*-4-col-phone"></div>-->
+        </div>
+    </h:body>
+</html>
+
