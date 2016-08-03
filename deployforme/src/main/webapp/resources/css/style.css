@@ -1,0 +1,116 @@
+/*
+The MIT License
+
+Copyright 2016, Juliano Macedo.
+See LICENSE file for details.
+
+*/
+/* 
+    Created on : Aug 1, 2016, 2:55:40 PM
+    Author     : Juliano Macedo
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,700);
+
+body{
+    font-family:'Roboto', sans-serif;
+    color:#fff;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+.section-style{
+    background-attachment:inherit;
+    background-position:50% 0;
+    background-repeat:no-repeat;
+    margin:0 auto;
+    width:100%;
+    background-size:cover;
+    display: inline;
+    padding: 3%;
+}
+
+.section-name{
+    font-weight:700;
+    text-align:center;
+    text-transform:uppercase;
+    margin:0;
+}
+
+.section-title{
+    text-align:center;
+    text-transform:uppercase;
+    font-weight:300;
+    font-size:80px;
+}
+
+.section-description{
+    font-weight:300;
+    text-align:center;
+    line-height:30px;
+}
+
+.section-form-subscribe{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 2%;
+}
+
+.site-title{
+    text-align:center;
+    font-size:66px;
+    font-family:'Pacifico';
+    margin:0 0 50px 0;
+    padding-bottom:50px;
+    position:relative;
+}
+.site-title:before,
+.site-title:after{
+    content:"";
+    width:100px;
+    height:10px;
+    left:50%;
+    margin-left:-50px;
+    border-bottom:1px double #fff;
+    position:absolute;
+}
+.site-title:before{
+    bottom:0;
+}
+.site-title:after{
+    bottom:2px;
+}
+
+.space{
+    padding-top: 2%;
+}
+
+.flip-clock, .flip-clock-wrapper{
+    justify-content: space-around;
+}
+
+#btnshowsubscribe{
+    font-weight: bold;
+}
+
+#btnsubscribe{
+    font-weight: bold;
+}
+
+#maincontent{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.center-space-around{
+    justify-content: space-around;
+}
+
+#surveyheader{
+    text-align: center;
+}
