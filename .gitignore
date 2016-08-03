@@ -1,3 +1,7 @@
+*/nbproject/
+*/target/
+*/nb-configuration.xml
+
 *.class
 
 # Mobile Tools for Java (J2ME)
