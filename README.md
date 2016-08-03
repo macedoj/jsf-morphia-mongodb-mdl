@@ -1,6 +1,9 @@
 # simple-jsf-morphia-mdl
 Simple web application build with JSF, Morphia, MongoDB and Material Design Lite.
 
+**Project Status**
+* [![Build Status](https://travis-ci.com/JulianoR/simple-jsf-morphia-mdl.svg?token=aYFX5KNaGzrdnztn8tk4&branch=master)](https://travis-ci.com/JulianoR/simple-jsf-morphia-mdl)
+
 **Dependencies**
 
 * Project dependencies are up to date in pom.xml file.
