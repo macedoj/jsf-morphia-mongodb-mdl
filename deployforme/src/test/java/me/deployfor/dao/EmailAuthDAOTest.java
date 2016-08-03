@@ -15,6 +15,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Ignore;
 import org.mongodb.morphia.Morphia;
 import org.mongodb.morphia.query.QueryResults;
 import util.MongoUtil;
@@ -23,6 +24,7 @@ import util.MongoUtil;
  *
  * @author Juliano Macedo
  */
+@Ignore
 public class EmailAuthDAOTest {
 
     private MongoClient mongo;
