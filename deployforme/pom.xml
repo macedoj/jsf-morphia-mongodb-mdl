@@ -62,7 +62,7 @@
             <optional>true</optional>
         </dependency>
         
-         <dependency>
+        <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-email</artifactId>
             <version>1.4</version>
@@ -123,18 +123,6 @@
                 <artifactId>cobertura-maven-plugin</artifactId>
                 <version>2.6</version>
                 <configuration>
-                    <instrumentation>
-                        <!--
-                        <ignores>
-                            <ignore>com.ideiah.gerenciadorpampatec.controller.*</ignore>
-                        </ignores>
-                        <excludes>
-                            <exclude>com/ideiah/gerenciadorpampatec/controller/*.class</exclude>
-                        </excludes>
-                        
-                        <ignoreTrivial>true</ignoreTrivial>                 
-                        -->
-                    </instrumentation>
                     <argLine>-XX:-UseSplitVerifier</argLine>
                     <formats>
                         <format>xml</format>
