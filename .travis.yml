@@ -6,13 +6,11 @@ jdk:
 after_success:
   - bash <(curl -s https://codecov.io/bash) -t af854716-72bf-421f-bf39-7ad1dbd80c81
 deploy:
-  - provider: s3
-  - provider: codedeploy
-  access_key_id: AKIAJIAVSSAW22KP35SQ
-  secret_access_key:
-    secure: f6CfgyclJYNcbG60O3bacM8V8n1s42iajf2T1GPCN6LbRJ+fqgVOXpNq0pA8dB3OjIS/O+Z/qQPTIOt7nTejYKUvFB2s/Q14Pwe/fb2m9fxzd0FwS9TUO2s7TDQveOJNt8AevmmkUyFVQ8NGQw+T1hco+SvHHw3tI4NR1cC+YiHuddhGze0tjdvD9ohH2mzZwicXZnsx3PsccERn6FHaerGuT0KLKPT59FXwIoTfvOGq10Rt6MDrP4a74rgmae4qYRB2K/g6z8mA2qOATOPhOxHin1cwe6dquRqxIcSNka8mBANsUp5jO+aMjduCUtPlLGFJcbT8YFJkdzBQqA5WwkN1JhRmFGwe0mvt3+rTaHErV4aSGfocPBA88ZaHa7cO5JVM3CAi1O1oHti1ZaVMWyJ3loB4foNctnQpcTKKs7XB2bWvZ7Ra8oZXa3eyFOgCFltFjHBP30uv6IW5DEfTliZ1JQkWOAsWgadX70M3dv7IXlsMx37UzIPluRHLoyq32JEAsT7CQiAo3aNqlTos529Krk1xvgAYA3IbJc193um9Wc1Nhu3H+Wy059KGWS4i5faE5vydtBR/dloAVbQxP8JTGHdQCVzOsDvrS/4yWrJ1V30vk1eZMPc/cfpztDHgVs2h15ustfiZXqp6B9vhktERqtr+q6LjU/ZyVA0uqko=
-  bucket: "S3 Bucket"
-  key: latest/deployforme.zip
-  application: deployforme
-  deployment_group: Group_Deployforme
-  detect_encoding: true
+  - provider: s3 #  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: "S3 Bucket"
+    key: latest/deployforme.zip
+    application: deployforme
+    deployment_group: Group_Deployforme
+    detect_encoding: true
