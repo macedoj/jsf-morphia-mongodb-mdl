@@ -11,7 +11,7 @@ codecov:
  
 coverage:
   precision: 2  # 2 = xx.xx%, 0 = xx%
-  round: down|up|nearest # default down
+  round: nearest # default down
   range: "50...100"
 
   status:
