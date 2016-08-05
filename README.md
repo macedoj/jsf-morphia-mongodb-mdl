@@ -2,7 +2,7 @@
 Simple web application build with JSF, Morphia, MongoDB and Material Design Lite.
 
 **Project Status**
-* [![Build Status](https://travis-ci.com/JulianoR/simple-jsf-morphia-mdl.svg?token=aYFX5KNaGzrdnztn8tk4&branch=master)](https://travis-ci.com/JulianoR/simple-jsf-morphia-mdl)
+* [...]
 * [![codecov](https://codecov.io/gh/JulianoR/simple-jsf-morphia-mdl/branch/master/graph/badge.svg?token=udvpX7JZD4)](https://codecov.io/gh/JulianoR/simple-jsf-morphia-mdl) *
  
  **See  [Issue #5](https://github.com/JulianoR/simple-jsf-morphia-mdl/issues/5)*
@@ -12,8 +12,8 @@ Simple web application build with JSF, Morphia, MongoDB and Material Design Lite
 * Project dependencies are up to date in pom.xml file.
  
 **Requirements**
-* Java Web EE 7
-* JDK 1.8
+* Java EE 7
+* JDK 8 *or* Open JDK 7
 * GlassFish Server 4.1.1
 
 **License**
