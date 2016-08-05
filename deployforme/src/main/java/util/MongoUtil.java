@@ -12,7 +12,7 @@ import com.mongodb.MongoClient;
 import java.util.logging.Level;
 
 /**
- * {Insert class description here}
+ * <p></p>
  *
  * @author Juliano Macedo  < /JulianoR at GitHub and Bitbucket >
  * @since 2016.07.23, 8:47:37 AM
