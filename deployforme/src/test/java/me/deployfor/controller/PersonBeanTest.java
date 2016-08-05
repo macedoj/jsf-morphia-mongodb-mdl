@@ -24,7 +24,6 @@ import util.MongoUtil;
  *
  * @author Juliano Macedo
  */
-@Ignore
 public class PersonBeanTest {
 
     private String name;

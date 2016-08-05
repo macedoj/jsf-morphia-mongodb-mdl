@@ -19,7 +19,6 @@ import org.junit.Test;
  *
  * @author Juliano Macedo
  */
-@Ignore
 public class EmailManagerTest {
 
     private String name;

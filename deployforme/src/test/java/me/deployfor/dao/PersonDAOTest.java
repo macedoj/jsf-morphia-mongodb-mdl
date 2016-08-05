@@ -16,7 +16,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.junit.Ignore;
 import org.mongodb.morphia.Morphia;
 import util.MongoUtil;
 
@@ -24,7 +23,6 @@ import util.MongoUtil;
  *
  * @author Juliano Macedo
  */
-@Ignore
 public class PersonDAOTest {
 
     private String name;
