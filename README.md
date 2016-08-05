@@ -3,9 +3,7 @@ Simple web application build with JSF, Morphia, MongoDB and Material Design Lite
 
 **Project Status**
 * [![Build Status](https://travis-ci.org/JulianoR/simple-jsf-morphia-mdl.svg?branch=master)](https://travis-ci.org/JulianoR/simple-jsf-morphia-mdl)
-* [![codecov](https://codecov.io/gh/JulianoR/simple-jsf-morphia-mdl/branch/master/graph/badge.svg?token=udvpX7JZD4)](https://codecov.io/gh/JulianoR/simple-jsf-morphia-mdl) *
- 
- **See  [Issue #5](https://github.com/JulianoR/simple-jsf-morphia-mdl/issues/5)*
+* [![codecov](https://codecov.io/gh/JulianoR/simple-jsf-morphia-mdl/branch/master/graph/badge.svg?token=udvpX7JZD4)](https://codecov.io/gh/JulianoR/simple-jsf-morphia-mdl)
 
 **Dependencies**
 
