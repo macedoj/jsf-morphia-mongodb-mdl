@@ -4,6 +4,7 @@ jdk:
   - oraclejdk8
   - openjdk7
 after_success:
+  - bash curl --data-binary @codecov.yml https://codecov.io/validate
   - bash <(curl -s https://codecov.io/bash) -t af854716-72bf-421f-bf39-7ad1dbd80c81
 #deploy:
 #  - provider: s3 #  - provider: codedeploy
