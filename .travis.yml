@@ -1,8 +1,13 @@
 language: java
-script: mvn test -f ./deployforme/pom.xml
 jdk:
   - oraclejdk8
   - openjdk7
+services:
+  - mongodb
+before_script:
+  - sleep 15 #mongo may not respond immediatly
+  - mongo --version
+script: mvn test -f ./deployforme/pom.xml
 after_success:
   - curl --data-binary @codecov.yml https://codecov.io/validate
   - bash <(curl -s https://codecov.io/bash) -t af854716-72bf-421f-bf39-7ad1dbd80c81
