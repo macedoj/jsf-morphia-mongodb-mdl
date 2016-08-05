@@ -20,8 +20,6 @@ coverage:
     patch: true
     changes: false
 
-  ignore: null
-
 comment:
   layout: "header, diff"
   behavior: default  # update if exists else create new
