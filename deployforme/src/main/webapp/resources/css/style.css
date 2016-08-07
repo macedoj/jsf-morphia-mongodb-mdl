@@ -33,13 +33,11 @@ body{
 
 .section-name{
     font-weight:700;
-    text-align:center;
     text-transform:uppercase;
     margin:0;
 }
 
 .section-title{
-    text-align:center;
     text-transform:uppercase;
     font-weight:300;
     font-size:80px;
@@ -52,7 +50,7 @@ body{
 }
 
 .section-form-subscribe{
-    width: 100%;
+    width: 90%;
     text-align: center;
     position: absolute;
     bottom: 2%;
@@ -86,10 +84,10 @@ body{
 .space{
     padding-top: 2%;
 }
-
+/*
 .flip-clock, .flip-clock-wrapper{
     justify-content: space-around;
-}
+}*/
 
 #btnshowsubscribe{
     font-weight: bold;
@@ -107,10 +105,12 @@ body{
     text-align: center;
 }
 
-.center-space-around{
+.justify-space-around{
     justify-content: space-around;
 }
 
-#surveyheader{
-    text-align: center;
+.form-style{
+    background-color: #fff; 
+    color: #212121; 
+    padding: 5%;
 }
