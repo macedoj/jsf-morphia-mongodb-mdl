@@ -30,7 +30,7 @@
             $(document).ready(function () {
                 $("#formsurvey").trigger("reset");
 
-                    var subscriptionOk = #{surveyBean.answerSavedOk};
+                var subscriptionOk = #{surveyBean.answerSavedOk};
                 if (subscriptionOk) {
                     swal("Tudo certo!", "Guardamos a sua opinião com todo o carinho, muito obrigado!", "success");
                 }
@@ -48,29 +48,28 @@
 
     </h:head>
     <h:body>
-        <section class="section-style">
-            <article>
-                <header>
-                    <h1 class="site-title">
-                        DeployFor.Me
-                    </h1>
-                </header>
-            </article>
-        </section>
-
         <div class="mdl-grid">
-            <!--<div class="mdl-cell mdl-cell-*-2-col mdl-cell-*-4-col-phone"></div>-->
+            <section class="section-style">
+                <article>
+                    <header>
+                        <h1 class="site-title">
+                            DeployFor.Me
+                        </h1>
+                    </header>
+                </article>
+            </section>
+
             <div class="mdl-layout-spacer"></div>
             <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
                 <main>
                     <div class="mdl-shadow--6dp">
-                        <div class="mdl-card__title mdl-color--primary mdl-color-text--white center-space-around">
+                        <div class="mdl-card__title mdl-color--primary mdl-color-text--white mdl-typography--text-center justify-space-around">
                             <i class="material-icons md-48">question_answer</i> 
                             <h3 class="mdl-card__title-text">Sua opinião é fundamental para nós!</h3> 
                             <i class="material-icons md-48">question_answer</i>
                         </div>
                     </div>
-                    <h:form id="formsurvey" style="background-color: #fff; color: #212121; padding: 5%;">
+                    <h:form id="formsurvey" class="form-style">
                         <div>
                             <div>
                                 <h4>1. Qual a sua profissão ou cargo? </h4>
@@ -92,7 +91,8 @@
                                 <h:selectOneRadio id="radioquestion2"
                                                   layout="pageDirection"
                                                   value="#{surveyBean.answer2}"
-                                                  a:required="true">
+                                                  a:required="true"
+                                                  >
                                     <f:selectItem itemValue="A" itemLabel="Disponibilidade (24/7)"/>
                                     <f:selectItem itemValue="B" itemLabel="Performance"/>
                                     <f:selectItem itemValue="C" itemLabel="Preço"/>
@@ -106,7 +106,8 @@
                                 <h:selectOneRadio id="radioquestion3"
                                                   layout="pageDirection"
                                                   value="#{surveyBean.answer3}"
-                                                  a:required="true">
+                                                  a:required="true"
+                                                  >
                                     <f:selectItem itemValue="A" itemLabel="Performance de disco (Gravação/Leitura)"/>
                                     <f:selectItem itemValue="B" itemLabel="Performance de Rede"/>
                                     <f:selectItem itemValue="C" itemLabel="Performance de Processador e/ou Memória"/>
@@ -120,19 +121,22 @@
                                 <h:selectOneRadio id="radioquestion4"
                                                   layout="pageDirection"
                                                   value="#{surveyBean.answer4}"
-                                                  a:required="true">
+                                                  a:required="true"
+                                                  >
                                     <f:selectItem itemValue="A" itemLabel="10 até 20 R$/Mês"/>
                                     <f:selectItem itemValue="B" itemLabel="20 até 30 R$/Mês"/>
                                     <f:selectItem itemValue="C" itemLabel="30 até 40 R$/Mês"/>
                                     <f:selectItem itemValue="D" itemLabel="40 até 50 R$/Mês"/>
                                     <f:selectItem itemValue="E" itemLabel="50 ou mais R$/Mês"/>
                                 </h:selectOneRadio>
-                            </div>               
-                            <div id="surveyheader">
+                            </div>
+                            
+                            <div id="surveyheader" class="mdl-typography--text-center">
                                 <h:commandButton class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
                                                  action="#{surveyBean.saveSurveyAnswers()}" 
                                                  title="Clique aqui para submeter sua opinião :)"
-                                                 value="Submeter">
+                                                 value="Submeter"
+                                                 >
                                 </h:commandButton>
                             </div>
                             <hr/>
@@ -141,7 +145,6 @@
                 </main>
             </div>
             <div class="mdl-layout-spacer"></div>
-            <!--<div class="mdl-cell mdl-cell-*-2-col mdl-cell-*-4-col-phone"></div>-->
         </div>
     </h:body>
 </html>
