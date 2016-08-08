@@ -37,25 +37,21 @@
 
 /* Main */
 .flip-clock-wrapper {
-  font: normal 16px "Helvetica Neue", Helvetica, sans-serif;
-  -webkit-user-select: none;
-}
+  font: normal 11px "Helvetica Neue", Helvetica, sans-serif;
+  -webkit-user-select: none; }
 
 .flip-clock-meridium {
   background: none !important;
   box-shadow: 0 0 0 !important;
   font-size: 36px !important; }
 
-.flip-clock-meridium a { 
-    color: #313333; 
-}
+.flip-clock-meridium a { color: #313333; }
 
 .flip-clock-wrapper {
   text-align: center;
-  position: absolute;
-/*  top: 50%;
-  left: 27%;
-  width:auto;*/
+  position: relative;
+  width: 100%;
+  margin: 1em;
 }
 
 .flip-clock-wrapper:before,
@@ -72,8 +68,8 @@
   position: relative;
   float: left;
   margin: 5px;
-  width: 90px;
-  height: 120px;
+  width: 60px;
+  height: 90px;
   font-size: 80px;
   font-weight: bold;
   line-height: 87px;
@@ -132,7 +128,7 @@
 .flip-clock-wrapper ul li a div.up:after {
   content: "";
   position: absolute;
-  top: 56px;
+  top: 44px;
   left: 0;
   z-index: 5;
   width: 100%;
@@ -153,7 +149,6 @@
 
 .flip-clock-wrapper ul li a div div.inn {
   position: absolute;
-  padding-top: 15px;
   left: 0;
   z-index: 1;
   width: 100%;
@@ -163,7 +158,7 @@
   text-align: center;
   background-color: #333;
   border-radius: 6px;
-  font-size: 87px; }
+  font-size: 70px; }
 
 .flip-clock-wrapper ul li a div.up div.inn {
   top: 0; }
@@ -206,14 +201,15 @@
 .flip-clock-divider .flip-clock-label {
   position: absolute;
   top: -1.5em;
-  right: -120px;
+  right: -86px;
+  color: black;
   text-shadow: none; }
 
 .flip-clock-divider.minutes .flip-clock-label {
-  right: -128px; }
+  right: -88px; }
 
 .flip-clock-divider.seconds .flip-clock-label {
-  right: -130px; }
+  right: -91px; }
 
 .flip-clock-dot.top {
   top: 30px; }
