@@ -81,7 +81,6 @@ body{
     bottom:     2%;
 }
 
-
 .space{
     padding-top: 2%;
 }
@@ -95,12 +94,9 @@ body{
     font-weight: bold;
 }
 
-#maincontent{
-    position:   absolute;
-    left:       50%;
-    top:        50%;
-    transform:  translate(-50%, -50%);
-    text-align: center;
+.mdl-textfield{
+    display: inherit;
+    width: inherit;
 }
 
 .justify-space-around{

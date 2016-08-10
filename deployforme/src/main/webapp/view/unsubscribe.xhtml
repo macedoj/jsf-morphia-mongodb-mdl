@@ -34,7 +34,7 @@
                 if (unsubscriptionOk) {
                     swal("Tudo certo!", "Você foi descastrado(a) com sucesso!", "success");
                     /*$('#btnemaildel').prop("disabled", true);
-                    $('input, button').disable(true);*/
+                     $('input, button').disable(true);*/
                 }
             });
 
@@ -54,57 +54,75 @@
         </style>
     </h:head>
     <h:body>
-        <section class="section-style">
-            <article>
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col">
                 <header>
-                    <h1 class="site-title">
-                        DeployFor.Me
-                    </h1>
+                    <div class="mdl-layout__header--transparent">
+                        <section class="section-style mdl-typography--text-center">
+                            <article>
+                                <h1 class="site-title">
+                                    DeployFor.Me
+                                </h1>
+                            </article>
+                            <br/>
+                            <h3 class="site-description">
+                                <span>
+                                    <i>Descadastro de email</i>
+                                </span>
+                            </h3>
+                            <br/>
+                        </section>
+                    </div>
                 </header>
-            </article>
+            </div>
+        </div>
 
-            <main id="maincontent" class="mdl-layout__content">
-                <div class="mdl-card mdl-shadow--6dp">
-                    <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
-                        <i class="material-icons md-48">delete_forever</i> 
-                        <h3 class="mdl-card__title-text">Você não receberá mais nossas atualizações!</h3>
-                        <i class="material-icons md-48">delete_forever</i>
-                    </div>
-                    
-                    <div class="mdl-card__supporting-text">
-                        <h:form id="formunsubscription">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <h:inputText id="textemail" 
-                                             class="mdl-textfield__input"
-                                             title="Digite seu email."
-                                             a:type="email"
-                                             a:placeholder="Email"
-                                             a:required="true"
-                                             a:pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"
-                                             lang="pt"
-                                             alt="Digite seu email."
-                                             value="#{personBean.email}">
-                                </h:inputText>
-                                <label class="mdl-textfield__label"></label>
-                                <!-- <span class="mdl-textfield__error">Por favor, digite um email válido!</span> -->
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col">
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+                        <main id="maincontent">
+                            <div class="mdl-shadow--6dp">
+                                <div class="mdl-card__title mdl-color--primary mdl-color-text--white mdl-typography--text-center justify-space-around">
+                                    <i class="material-icons md-48">delete_forever</i> 
+                                    <h3 class="mdl-card__title-text">Você não receberá mais nossas atualizações!</h3>
+                                    <i class="material-icons md-48">delete_forever</i>
+                                </div>
+                                <h:form id="formunsubscription" class="form-style">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-typography--text-center">
+                                        <h:inputText id="textemail" 
+                                                     class="mdl-textfield__input"
+                                                     title="Digite seu email para realizar o descadastramento."
+                                                     a:type="email"
+                                                     a:placeholder="Email"
+                                                     a:required="true"
+                                                     a:pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"
+                                                     lang="pt"
+                                                     alt="Digite seu email."
+                                                     value="#{personBean.email}">
+                                        </h:inputText>
+                                        <label class="mdl-textfield__label"></label>
+                                        <!-- <span class="mdl-textfield__error">Por favor, digite um email válido!</span> -->
+                                    </div>
+
+                                    <div class="mdl-typography--text-center">
+                                        <h:commandButton id="btnemaildel"
+                                                         class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                                                         title="Clique aqui para descadastrar seu email."
+                                                         value="Descadastrar"
+                                                         action="#{personBean.unsubscribe()}" 
+                                                         >
+                                        </h:commandButton>
+                                    </div>
+                                </h:form>
                             </div>
-
-
-                            <div class="mdl-card__actions mdl-card--border">
-                                <h:commandButton id="btnemaildel"
-                                                 class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-                                                 title="Clique aqui para descadastrar seu email."
-                                                 value="Descadastrar"
-                                                 action="#{personBean.unsubscribe()}" 
-                                                 >
-                                </h:commandButton>
-                            </div>
-                        </h:form>
+                        </main>
                     </div>
+                    <div class="mdl-layout-spacer"></div>
                 </div>
-            </main>
-        </section>
-
+            </div>
+        </div>
     </h:body>
 </html>
 
