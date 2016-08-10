@@ -12,7 +12,9 @@ import com.mongodb.MongoClient;
 import java.util.logging.Level;
 
 /**
- * <p></p>
+ * <p>
+ * Classe responsável por realizar conexão com a base de dados e fornecer para a
+ * aplicação acesso ao mesmo. </p>
  *
  * @author Juliano Macedo  < /JulianoR at GitHub and Bitbucket >
  * @since 2016.07.23, 8:47:37 AM
@@ -26,8 +28,11 @@ public abstract class MongoUtil {
     private static final String DB_NAME = "deployforme";
 
     /**
+     * <p>
+     * Método responsável uma nova conexão com o MongoDB sempre que necessário,
+     * por meio de um <i>Singleton</i>.</p>
      *
-     * @return the MongoDB connection
+     * @return A conexão ao MongoDB. Do tipo <code>MongoClient</code>.
      */
     public static MongoClient getMongoConnection() {
         if (mongoClient == null) {
