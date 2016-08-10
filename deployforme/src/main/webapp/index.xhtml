@@ -47,12 +47,10 @@
             $(document).on("pageload", function () {
                 $('#formsubscribe').trigger("reset");
             });
-
         </script>
         <style>
             body {
-                background-image: url("resources/img/background.jpg");
-                background-size: cover;
+                background: url("resources/img/background.jpg") center / cover;
                 background-repeat: no-repeat; 
                 background-attachment:fixed;
                 min-height: available;
@@ -60,105 +58,122 @@
         </style>
     </h:head>
     <h:body>
-        <section class="section-style">
-            <article>
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col">
                 <header>
-                    <h1 class="site-title">
-                        DeployFor.Me
-                    </h1>
-                    <h3 class="section-name">
-                        <span>
-                            Realizando Deploy da sua aplicação até 10x mais rápido!
-                        </span>
-                    </h3>
-                    <br/>
-                    <h2 class="section-title">
-                        Em breve!
-                    </h2>
+                    <section class="section-style mdl-typography--text-center">
+                        <h1 class="site-title">
+                            DeployFor.Me
+                        </h1>
+                        <h3 class="site-description">
+                            <span>
+                                <i>Deploy da sua aplicação até 10x mais rápido!</i>
+                            </span>
+                        </h3>
+                        <br/>
+                        <h2 class="site-coming-soon">
+                            Em breve!
+                        </h2>
+
+                    </section>
                 </header>
-            </article>
-
-            <div class="mdl-grid space">
-                <div class="mdl-layout-spacer"></div>
-                <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"
-                     title="O laçamento ocorrerá dia 15 de Agosto de 2016!">
-                    <div class="flip-clock mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-                    <script type="text/javascript">
-                        var clock = $('.flip-clock').FlipClock(new Date(2016, 07, 15), {
-                            clockFace: 'DailyCounter',
-                            countdown: true,
-                            language: "pt-br"
-                        });
-                    </script>
-                </div>
-                <div class="mdl-layout-spacer"></div>
             </div>
+        </div>
 
-            <section class="section-form-subscribe">
-                <h:form>
-                    <button id="btnshowsubscribe" 
-                            class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
-                            title="Cadastre-se e receba informações em primeira não!"
-                            type="button"> 
-                        <i class="material-icons md-36">done</i> Cadastre-se
-                    </button>
-                </h:form>
-
-                <main id="subscribe" class="mdl-layout__content">
-                    <div class="mdl-card mdl-shadow--6dp">
-                        <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
-                            <i class="material-icons md-48">mood</i> 
-                            <h3 class="mdl-card__title-text">Para receber nossas atualizações!</h3>
-                            <i class="material-icons md-48">mood</i>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            <h:form id="formsubscribe">
-                                <div class="mdl-textfield mdl-js-textfield">
-                                    <h:inputText id="textnome"
-                                                 class="mdl-textfield__input" 
-                                                 a:type="text"
-                                                 title="Digite seu nome"
-                                                 a:autofocus="true"
-                                                 a:required="true"
-                                                 lang="pt"
-                                                 alt="Digite seu nome."
-                                                 value="#{personBean.name}"
-                                                 >
-                                    </h:inputText>
-                                    <label class="mdl-textfield__label" for="textnome">Nome</label>
-                                </div>
-
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <h:inputText id="textemail" 
-                                                 class="mdl-textfield__input"
-                                                 title="Digite seu melhor email."
-                                                 a:type="email"
-                                                 a:placeholder="Email"
-                                                 a:required="true"
-                                                 a:pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"
-                                                 lang="pt"
-                                                 alt="Digite seu melhor email."
-                                                 value="#{personBean.email}">
-                                    </h:inputText>
-                                    <label class="mdl-textfield__label"></label>
-                                    <!-- <span class="mdl-textfield__error">Por favor, digite um email válido!</span> -->
-                                </div>
-
-                                <div class="mdl-card__actions mdl-card--border">
-                                    <h:commandButton id="btnsubscribe" 
-                                                     class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-                                                     title="Clique para finalizar o cadastro!"
-                                                     value="Enviar"
-                                                     action="#{personBean.subscribe()}"
-                                                     >
-                                    </h:commandButton>
-                                </div>
-                            </h:form>
-                        </div>
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col">
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"
+                         title="O laçamento ocorrerá dia 15 de Agosto de 2016!">
+                        <div class="flip-clock mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+                        <script type="text/javascript">
+                            var clock = $('.flip-clock').FlipClock(new Date(2016, 07, 15), {
+                                clockFace: 'DailyCounter',
+                                countdown: true,
+                                language: "pt-br"
+                            });
+                        </script>
                     </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col">
+
+                <main>
+                    <section class="section-form-subscribe">
+                        <h:form>
+                            <button id="btnshowsubscribe" 
+                                    class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+                                    title="Cadastre-se e receba informações em primeira não!"
+                                    type="button"> 
+                                <i class="material-icons md-36">done</i> Cadastre-se
+                            </button>
+                        </h:form>
+
+                        <section id="subscribe" class="mdl-layout__content">
+                            <div class="mdl-card mdl-shadow--6dp">
+                                <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
+                                    <i class="material-icons md-48">mood</i> 
+                                    <h3 class="mdl-card__title-text">Para receber nossas atualizações!</h3>
+                                    <i class="material-icons md-48">mood</i>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    <h:form id="formsubscribe">
+                                        <div class="mdl-textfield mdl-js-textfield">
+                                            <h:inputText id="textnome"
+                                                         class="mdl-textfield__input" 
+                                                         a:type="text"
+                                                         title="Digite seu nome"
+                                                         a:autofocus="true"
+                                                         a:required="true"
+                                                         lang="pt"
+                                                         alt="Digite seu nome."
+                                                         value="#{personBean.name}"
+                                                         >
+                                            </h:inputText>
+                                            <label class="mdl-textfield__label" for="textnome">Nome</label>
+                                        </div>
+
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <h:inputText id="textemail" 
+                                                         class="mdl-textfield__input"
+                                                         title="Digite seu melhor email."
+                                                         a:type="email"
+                                                         a:placeholder="Email"
+                                                         a:required="true"
+                                                         a:pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"
+                                                         lang="pt"
+                                                         alt="Digite seu melhor email."
+                                                         value="#{personBean.email}">
+                                            </h:inputText>
+                                            <label class="mdl-textfield__label"></label>
+                                            <!-- <span class="mdl-textfield__error">Por favor, digite um email válido!</span> -->
+                                        </div>
+
+                                        <div class="mdl-card__actions mdl-card--border">
+                                            <h:commandButton id="btnsubscribe" 
+                                                             class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                                                             title="Clique para finalizar o cadastro!"
+                                                             value="Enviar"
+                                                             action="#{personBean.subscribe()}"
+                                                             >
+                                            </h:commandButton>
+                                        </div>
+                                    </h:form>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
                 </main>
-            </section>
-        </section>
+
+            </div>
+        </div>
+        
+        <!--</div>-->
     </h:body>
 </html>
 
