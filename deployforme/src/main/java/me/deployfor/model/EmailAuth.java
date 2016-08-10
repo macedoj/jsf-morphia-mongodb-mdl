@@ -13,7 +13,8 @@ import org.mongodb.morphia.annotations.Id;
 
 /**
  * <p>
- * Classe responsável por manter o objeto que contem as informaçoes de autenticaçao do email do sistema.</p>
+ * Classe responsável por manter o objeto que contem as informações de
+ * autenticação do <i>email</i> do sistema.</p>
  *
  * @author Juliano Macedo  < /JulianoR at GitHub and Bitbucket >
  * @since 2016.07.30, 1:11:10 AM
@@ -29,7 +30,7 @@ public class EmailAuth {
 
     public EmailAuth() {
     }
-    
+
     public EmailAuth(String email, String passphrase) {
         this.email = email;
         this.passphrase = passphrase;

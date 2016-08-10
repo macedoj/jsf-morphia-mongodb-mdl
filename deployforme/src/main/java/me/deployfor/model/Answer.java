@@ -13,7 +13,9 @@ import org.mongodb.morphia.annotations.Id;
 
 /**
  * <p>
- * {Insert class description here}</p>
+ * Classe responsável por manter o objeto que contem as respostas de cada
+ * usuário, referente ao questionário do sistema.
+ * </p>
  *
  * @author Juliano Macedo  < /JulianoR at GitHub and Bitbucket >
  * @since 2016.07.29, 1:20:38 PM
@@ -26,6 +28,14 @@ public class Answer {
     private ObjectId id;
     private int questionNumber;
     private String answer;
+    /**
+     * Inicial o sistema projetado para registrar a autoria das respostas, mas
+     * ao pesquisa sobre, descobri que respostas em modo anônimo aumentam a o
+     * engajamento e a honestidade das respostas.
+     *
+     * @deprecated o email não mais é utilizado para identificar o autor das
+     * respostas.
+     */
     @Deprecated
     private String email;
 

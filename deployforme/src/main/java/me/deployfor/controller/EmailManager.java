@@ -19,7 +19,7 @@ import util.MongoUtil;
 /**
  * <p>
  * Classe destinada a manipular as informações necessárias quando o sistema
- * precisar envia <i>email</i>.
+ * precisar envia <i>emails</i>.
  * </p>
  *
  * @author Juliano Macedo  < /JulianoR at GitHub and Bitbucket >

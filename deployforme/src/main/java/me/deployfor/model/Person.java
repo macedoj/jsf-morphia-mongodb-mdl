@@ -12,7 +12,9 @@ import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 
 /**
- * <p></p>
+ * <p>
+ * Classe responsável por manter o objeto que contem as informações pessoas do
+ * usuário dentro do sistema.</p>
  *
  * @author Juliano Macedo  < /JulianoR at GitHub and Bitbucket >
  * @since 2016.07.23, 8:43:35 AM
@@ -21,7 +23,7 @@ import org.mongodb.morphia.annotations.Id;
 @Entity
 public class Person {
 
-    @Id 
+    @Id
     private ObjectId id;
     private String name;
     private String email;

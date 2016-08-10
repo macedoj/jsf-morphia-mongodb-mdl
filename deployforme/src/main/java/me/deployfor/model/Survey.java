@@ -15,11 +15,14 @@ import java.util.ArrayList;
 
 /**
  * <p>
- * {Insert class description here}</p>
+ * Classe responsável por manter o objeto que aglomera todas as informações do
+ * questionário aplicado aos usuário, mantendo um  <code>ArrayList</code> com as
+ * perguntas do questionário.</p>
  *
  * @author Juliano Macedo  < /JulianoR at GitHub and Bitbucket >
  * @since 2016.07.23, 8:45:35 AM
  * @version 0.1
+ * @deprecated Classe legada por mudança na engenharia da aplicação.  
  */
 //@Entity
 @Deprecated
@@ -40,7 +43,6 @@ public class Survey {
 //    public ObjectId getId() {
 //        return id;
 //    }
-
     public ArrayList<Question> getQuestions() {
         return questions;
     }

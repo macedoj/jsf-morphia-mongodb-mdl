@@ -20,6 +20,8 @@ import util.MongoUtil;
 
 /**
  * <p>
+ * Classe responsável por manipular as informações pessoais do usuário, quando
+ * esse realiza sua inscrição no sistema.
  * </p>
  *
  * @author Juliano Macedo  < /JulianoR at GitHub and Bitbucket >
@@ -47,7 +49,7 @@ public class PersonBean implements Serializable {
 
     /**
      * <p>
-     * Método responsável por realizar a inscriçao do novo usuário no
+     * Método responsável por realizar a inscrição do novo usuário no
      * sistema.</p>
      *
      */

@@ -35,6 +35,14 @@ public class SurveyBean implements Serializable {
     private String answer2;
     private String answer3;
     private String answer4;
+    /**
+     * Inicial o sistema projetado para registrar a autoria das respostas, mas
+     * ao pesquisa sobre, descobri que respostas em modo anônimo aumentam a o
+     * engajamento e a honestidade das respostas.
+     *
+     * @deprecated o email não mais é utilizado para identificar o autor das
+     * respostas.
+     */
     @Deprecated
     private String email;
     private boolean answerSavedOk;
@@ -115,7 +123,6 @@ public class SurveyBean implements Serializable {
 //        return (email != null)
 //                && (!email.isEmpty());
 //    }
-
     public String getAnswer1() {
         return answer1;
     }

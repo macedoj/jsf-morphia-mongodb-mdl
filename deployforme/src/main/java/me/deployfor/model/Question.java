@@ -12,11 +12,13 @@ import java.util.HashMap;
 
 /**
  * <p>
- * {Insert class description here}</p>
+ * Classe responsável por manter o objeto que contem as informações do
+ * questionário aplicado aos usuário.</p>
  *
  * @author Juliano Macedo  < /JulianoR at GitHub and Bitbucket >
  * @since 2016.07.29, 2:05:33 PM
  * @version 0.1
+ * @deprecated Classe legada por mudança na engenharia da aplicação.
  */
 //@Embedded
 @Deprecated
