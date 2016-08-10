@@ -19,12 +19,16 @@
             <h:outputStylesheet library="css" name="material.min.css" />
             <h:outputStylesheet library="css" name="font-awesome.min.css" />
             <h:outputStylesheet library="css" name="material-icons.css" />
+            <h:outputStylesheet library="css" name="jquery.classycountdown.min.css" />
             <h:outputStylesheet library="css" name="style.css" />
         </f:facet>
 
         <h:outputScript library="js" name="jquery-3.1.0.min.js" />
         <h:outputScript library="js" name="sweetalert.min.js" />
         <h:outputScript library="js" name="material.min.js" />
+        <h:outputScript library="js" name="jquery.classycountdown.min.js" />
+        <h:outputScript library="js" name="jquery.knob.js" />
+        <h:outputScript library="js" name="jquery.throttle.js" />
 
         <script type="text/javascript">
             $(document).ready(function () {
@@ -76,6 +80,35 @@
                 </header>
             </div>
         </div>
+
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col">
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+                        <div class="countdown mdl-cell--hide-phone"></div>
+                        <script type="text/javascript">
+                            $('.countdown').ClassyCountdown({
+                                theme: "white-wide",
+                                labelsOptions: {
+                                    lang: {
+                                        days: 'Dias',
+                                        hours: 'Horas',
+                                        minutes: 'Minutos',
+                                        seconds: 'Segundos'
+                                    },
+                                    style: 'font-size:0.5em;'
+                                },
+                                end: $.now() + 600000
+                            });
+                        </script>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+            </div>
+        </div>
+
+
 
         <div class="mdl-grid section-form-subscribe">
             <div class="mdl-cell mdl-cell--12-col">
