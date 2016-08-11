@@ -17,9 +17,9 @@
         <f:facet name="last">
             <h:outputStylesheet library="css" name="sweetalert.css" />
             <h:outputStylesheet library="css" name="material.min.css" />
-            <h:outputStylesheet library="css" name="font-awesome.min.css" />
             <h:outputStylesheet library="css" name="material-icons.css" />
             <h:outputStylesheet library="css" name="jquery.classycountdown.min.css" />
+            <h:outputStylesheet library="css" name="font-awesome.min.css" />
             <h:outputStylesheet library="css" name="style.css" />
         </f:facet>
 
@@ -29,35 +29,22 @@
         <h:outputScript library="js" name="jquery.classycountdown.min.js" />
         <h:outputScript library="js" name="jquery.knob.js" />
         <h:outputScript library="js" name="jquery.throttle.js" />
+        <h:outputScript library="js" name="deployforme.js" />
 
         <script type="text/javascript">
             $(document).ready(function () {
-                $('#formsubscribe').trigger("reset");
-
-                $("#subscribe").hide();
-
-                $("#btnshowsubscribe").click(function () {
-                    $("#subscribe").slideToggle(1000);
-                });
-
                 var subscriptionOk = #{personBean.subscriptionOk};
                 if (subscriptionOk) {
-                    swal("Tudo certo!", "Seu cadastro foi realizado com sucesso!", "success");
+                    swal({
+                        title: 'Tudo certo!',
+                        text: 'Seu cadastro foi realizado com sucesso!',
+                        type: 'success'
+                    }, function () {
+                        $('input:submit').attr("disabled", true);
+                    });
                 }
             });
-
-            $(document).on("pageload", function () {
-                $('#formsubscribe').trigger("reset");
-            });
         </script>
-        <style>
-            body {
-                background: url("resources/img/background.jpg") center / cover;
-                background-repeat: no-repeat; 
-                background-attachment:fixed;
-                min-height: available;
-            }
-        </style>
     </h:head>
     <h:body>
         <div class="mdl-grid">
@@ -108,8 +95,6 @@
             </div>
         </div>
 
-
-
         <div class="mdl-grid section-form-subscribe">
             <div class="mdl-cell mdl-cell--12-col">
                 <div class="mdl-grid">
@@ -118,7 +103,7 @@
                         <h:form class="mdl-typography--text-center">
                             <button id="btnshowsubscribe" 
                                     class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
-                                    title="Cadastre-se e receba informações em primeira não!"
+                                    title="Cadastre-se e receba informações em primeira mão!"
                                     type="button"> 
                                 <i class="material-icons md-36">done</i> Cadastre-se
                             </button>
@@ -163,9 +148,9 @@
                                         <!-- <span class="mdl-textfield__error">Por favor, digite um email válido!</span> -->
                                     </div>
 
-                                    <div class="mdl-card__actions mdl-card--border">
+                                    <div class="mdl-typography--text-center">
                                         <h:commandButton id="btnsubscribe" 
-                                                         class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                                                         class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
                                                          title="Clique para finalizar o cadastro!"
                                                          value="Enviar"
                                                          action="#{personBean.subscribe()}"
