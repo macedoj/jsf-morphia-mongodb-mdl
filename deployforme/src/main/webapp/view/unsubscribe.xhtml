@@ -19,10 +19,12 @@
             <h:outputStylesheet library="css" name="material.min.css" />
             <h:outputStylesheet library="css" name="material-icons.css" />
             <h:outputStylesheet library="css" name="font-awesome.min.css" />
+            <h:outputStylesheet library="css" name="pace-theme-corner-indicator.css" />
             <h:outputStylesheet library="css" name="style.css" />
         </f:facet>
 
         <h:outputScript library="js" name="jquery-3.1.0.min.js" />
+        <h:outputScript library="js" name="pace.min.js" />
         <h:outputScript library="js" name="sweetalert.min.js" />
         <h:outputScript library="js" name="material.min.js" />
         <h:outputScript library="js" name="deployforme.js" />
@@ -40,6 +42,9 @@
                         $('input:submit').attr("disabled", true);
                     });
                 }
+                $("#formunsubscription").submit(function () {
+                    Pace.restart();
+                });
             });
         </script>
     </h:head>
