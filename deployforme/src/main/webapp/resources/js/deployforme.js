@@ -14,23 +14,15 @@
 
 
 $(document).ready(function () {
-    $('#formsubscribe').trigger("reset");
-
-    $("#formunsubscription").trigger("reset");
-
-    $("#formsurvey").trigger("reset");
-
     $("#subscribe").hide();
 
     $("#btnshowsubscribe").click(function () {
         $("#subscribe").slideToggle(1000);
     });
-});
 
-$(document).on("pageload", function () {
-    $('#formsubscribe').trigger("reset");
-
-    $("#formunsubscription").trigger("reset");
-
-    $("#formsurvey").trigger("reset");
+    window.paceOptions = {
+        restartOnPushState: true,
+        startOnPageLoad: true,
+        ajax: true
+    };
 });
