@@ -18,9 +18,11 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Ignore;
 import org.mongodb.morphia.Morphia;
+import org.mongodb.morphia.query.QueryResults;
 import util.MongoUtil;
 
 /**
+ * <p></p>
  *
  * @author Juliano Macedo
  */
@@ -29,6 +31,7 @@ public class PersonBeanTest {
     private String name;
     private String email;
     private PersonBean instance;
+    private PersonDAO pdao;
 
     public PersonBeanTest() {
     }
@@ -45,15 +48,15 @@ public class PersonBeanTest {
     public void setUp() {
         instance = new PersonBean();
         name = "Person Test by Junit";
-        email = "rpv.management.site@gmail.com";
+        email = "junit@tester.com";
+        MongoClient mongo = MongoUtil.getMongoConnection();
+        Morphia morphia = new Morphia();
+        morphia.map(Person.class);
+        pdao = new PersonDAO(mongo, morphia, MongoUtil.getDBName());
     }
 
     @After
     public void tearDown() {
-        MongoClient mongo = MongoUtil.getMongoConnection();
-        Morphia morphia = new Morphia();
-        morphia.map(Person.class);
-        PersonDAO pdao = new PersonDAO(mongo, morphia, MongoUtil.getDBName());
         pdao.removeByEmail(email);
     }
 
@@ -62,9 +65,14 @@ public class PersonBeanTest {
      */
     @Ignore
     public void testSubscribe_Sucess() {
+        String expResult = email;
         instance.setName(name);
-        instance.setEmail(email);
+        instance.setEmail(expResult);
         instance.subscribe();
+
+        Person queryByEmail = pdao.queryByEmail(email);
+        String result = queryByEmail.getEmail();
+        assertEquals(result, expResult);
     }
 
     /**
@@ -72,14 +80,16 @@ public class PersonBeanTest {
      */
     @Ignore
     public void testSubscribe_Unsucess() {
+        long expResult = 1;
+        
         instance.setName(name);
         instance.setEmail(email);
         instance.subscribe();
-        /**
-         * Forçando um teste falso, pois tenta realizar a inscrição do mesmo
-         * usuário duas vezes seguidas.
-         */
         instance.subscribe();
+        
+        QueryResults<Person> queryAllByEmail = pdao.queryAllByEmail(email);
+        long result = queryAllByEmail.countAll();
+        assertEquals(result, expResult);
     }
 
     /**
@@ -87,9 +97,14 @@ public class PersonBeanTest {
      */
     @Test
     public void testUnsubscribe_Sucess() {
+        Person expResult = null;
+        
         instance.setName(name);
         instance.setEmail(email);
         instance.unsubscribe();
+        
+        Person result = pdao.queryByEmail(email);
+        assertEquals(result, expResult);   
     }
 
     /**
@@ -97,14 +112,15 @@ public class PersonBeanTest {
      */
     @Test
     public void testUnsubscribe_Unsucess() {
+        Person expResult = null;
+        
         instance.setName(name);
         instance.setEmail(email);
         instance.unsubscribe();
-        /**
-         * Forçando um teste falso, pois realiza a desinscrição do mesmo usuário
-         * duas vezes seguidas.
-         */
         instance.unsubscribe();
+        
+        Person result = pdao.queryByEmail(email);
+        assertEquals(result, expResult);         
     }
 
     /**
