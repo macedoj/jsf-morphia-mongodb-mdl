@@ -44,7 +44,7 @@ public class EmailUtilTest {
     @Before
     public void setUp() {
         name = "Junit Tester";
-        email = "rpv.management.site@gmail.com";
+        email = "junit@tester.com";
         mongo = MongoUtil.getMongoConnection();
         morphia = new Morphia();
         morphia.map(EmailAuth.class);

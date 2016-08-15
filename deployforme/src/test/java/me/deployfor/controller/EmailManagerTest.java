@@ -39,7 +39,7 @@ public class EmailManagerTest {
     @Before
     public void setUp() {
         name = "Junit Tester";
-        email = "rpv.management.site@gmail.com";
+        email = "junit@tester.com";
         instance = new EmailManager();
     }
 
