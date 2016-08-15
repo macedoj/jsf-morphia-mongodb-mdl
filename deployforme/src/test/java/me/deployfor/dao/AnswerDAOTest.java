@@ -45,7 +45,7 @@ public class AnswerDAOTest {
 
     @Before
     public void setUp() {
-        email = "firstperson@email.com";
+        email = "junit@tester.com";
         mongo = MongoUtil.getMongoConnection();
         morphia = new Morphia();
         morphia.map(Answer.class);

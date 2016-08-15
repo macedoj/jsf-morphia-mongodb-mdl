@@ -45,7 +45,7 @@ public class PersonDAOTest {
     @Before
     public void setUp() {
         name = "First Person in DB";
-        email = "firstperson@email.com";
+        email = "junit@tester.com";
         mongo = MongoUtil.getMongoConnection();
         morphia = new Morphia();
         morphia.map(Person.class);
