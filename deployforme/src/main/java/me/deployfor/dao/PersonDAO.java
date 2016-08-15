@@ -13,6 +13,7 @@ import org.bson.types.ObjectId;
 import org.mongodb.morphia.Morphia;
 import org.mongodb.morphia.dao.BasicDAO;
 import org.mongodb.morphia.query.Query;
+import org.mongodb.morphia.query.QueryResults;
 
 /**
  * <p>
@@ -71,12 +72,27 @@ public class PersonDAO extends BasicDAO<Person, ObjectId> {
      * Método para procurar na base de dados uma pessoa com o mesmo
      * <i>email</i> recebido por parâmetro.</p>
      *
-     * @param email do tipo <code>String</code>
+     * @param email do tipo <code>String</code>.
      * @return Objeto do tipo <code>Person</code> contendo o resultado da busca.
      */
     public Person queryByEmail(String email) {
         query.field("email").equal(email);
         return super.findOne(query);
+    }
+
+    /**
+     * <p>
+     * Método para procurar na base de dados todas as ocorrências de um usuário,
+     * de acordo com o <i>email</i> recebido por parâmetro. É utilizado para
+     * verifica a existência de cadastro duplicados.</p>
+     *
+     * @param email do tipo <code>String</code>.
+     * @return Um lista de objetos do tipo <code>Person</code> contendo o
+     * resultado da busca.
+     */
+    public QueryResults<Person> queryAllByEmail(String email) {
+        query.field("email").equal(email);
+        return super.find(query);
     }
 
     /**
