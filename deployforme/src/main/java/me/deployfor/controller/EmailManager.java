@@ -42,7 +42,7 @@ public class EmailManager {
      * Método responsável por invocar a classe que enviará o <i>email</i> ao
      * usuário.</p>
      *
-     * @param person - O usuário que receberá o <i>email</i> do sistema. [Objeto
+     * @param person O usuário que receberá o <i>email</i> do sistema. [Objeto
      * do tipo <code>Person</code>]
      */
     public void sendEmail(Person person) {

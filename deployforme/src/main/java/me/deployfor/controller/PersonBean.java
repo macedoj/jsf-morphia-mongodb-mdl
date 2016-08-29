@@ -59,14 +59,13 @@ public class PersonBean implements Serializable {
                 Person person = new Person(name, email);
                 PersonDAO pdao = new PersonDAO(mongo, morphia, MongoUtil.getDBName());
 
-                // Disponível para manipulaçao de feedback ao usário.
+                // Disponível para manipulação de feedback ao usário.
                 subscriptionOk = pdao.insert(person);
 
                 if (subscriptionOk) {
                     EmailManager em = new EmailManager();
                     em.sendEmail(person);
                 }
-
             } catch (Exception ex) {
                 Logger.getLogger(PersonBean.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -84,7 +83,7 @@ public class PersonBean implements Serializable {
             try {
                 PersonDAO pdao = new PersonDAO(mongo, morphia, MongoUtil.getDBName());
 
-                // Disponível para manipulaçao de feedback ao usário.
+                // Disponível para manipulação de feedback ao usário.
                 unsubscriptionOk = pdao.removeByEmail(email);
 
             } catch (Exception ex) {
