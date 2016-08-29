@@ -87,7 +87,7 @@ public class SurveyBean implements Serializable {
                 Answer a3 = new Answer(3, answer3, email);
                 adao.insert(a3);
 
-                Answer a4 = new Answer(4, answer2, email);
+                Answer a4 = new Answer(4, answer4, email);
                 answerSavedOk = adao.insert(a4);
             } catch (Exception ex) {
                 Logger.getLogger(SurveyBean.class.getName()).log(Level.SEVERE, null, ex);
