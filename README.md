@@ -1,4 +1,4 @@
-# simple-jsf-morphia-mdl
+# jsf-morphia-mongodb-mdl
 A simple web application built with JavaServer Faces (JSF), Morphia, MongoDB and Material Design Lite (MDL). 
 
 **Project Status**
