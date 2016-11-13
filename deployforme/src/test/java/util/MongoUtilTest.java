@@ -39,7 +39,7 @@ public class MongoUtilTest {
     }
 
     /**
-     * Setando os dados defaults para os testes, lembrando que os mesmo devems
+     * Setando os dados defaults para os testes, lembrando que os mesmo devem
      * ser configurados para cada contexto (servidor ou localhost).
      */
     @Before
