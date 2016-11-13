@@ -10,7 +10,6 @@ package me.deployfor.dao;
 import com.mongodb.MongoClient;
 import java.util.HashMap;
 import me.deployfor.model.Answer;
-import me.deployfor.model.Question;
 import org.bson.types.ObjectId;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -68,13 +67,11 @@ public class AnswerDAOTest {
         choices.put("C", "Third choice");
         choices.put("D", "Fourth choice");
 
-        Question question = new Question(1, "First Question in the Survey", choices);
-
-        Answer entity = new Answer(question.getNumber(), "A", email);
+        Answer entity = new Answer(1, "A", email);
         instance.insert(entity);
 
         int result = instance.queryByEmail(email).getQuestionNumber();
-        int expResult = question.getNumber();
+        int expResult = 1;
 
         assertEquals(expResult, result);
     }
