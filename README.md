@@ -2,8 +2,8 @@
 A simple web application built with JavaServer Faces (JSF), Morphia, MongoDB and Material Design Lite (MDL). 
 
 **Project Status**
-* [![Build Status](https://travis-ci.org/JulianoR/simple-jsf-morphia-mdl.svg?branch=master)](https://travis-ci.org/JulianoR/simple-jsf-morphia-mdl)
-* [![codecov](https://codecov.io/gh/JulianoR/simple-jsf-morphia-mdl/branch/master/graph/badge.svg?token=udvpX7JZD4)](https://codecov.io/gh/JulianoR/simple-jsf-morphia-mdl)
+* [![Build Status](https://travis-ci.org/JulianoR/jsf-morphia-mongodb-mdl.svg?branch=master)](https://travis-ci.org/JulianoR/jsf-morphia-mongodb-mdl)
+* [![codecov](https://codecov.io/gh/JulianoR/jsf-morphia-mongodb-mdl/branch/master/graph/badge.svg)](https://codecov.io/gh/JulianoR/jsf-morphia-mongodb-mdl)
 
 **Dependencies**
 
