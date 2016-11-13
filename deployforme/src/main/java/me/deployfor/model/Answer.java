@@ -29,9 +29,9 @@ public class Answer {
     private int questionNumber;
     private String answer;
     /**
-     * Inicial o sistema projetado para registrar a autoria das respostas, mas
-     * ao pesquisa sobre, descobri que respostas em modo anônimo aumentam a o
-     * engajamento e a honestidade das respostas.
+     * Inicialmente o sistema foi projetado para registrar a autoria das
+     * respostas, entretanto respostas anônimas aumentam a o engajamento e a
+     * honestidade das mesmas.
      *
      * @deprecated o email não mais é utilizado para identificar o autor das
      * respostas.
