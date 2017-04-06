@@ -30,6 +30,7 @@ public class PersonBeanTest {
 
     private String name;
     private String email;
+    private String emailPersonTwo;
     private PersonBean instance;
     private PersonDAO pdao;
 
@@ -49,6 +50,7 @@ public class PersonBeanTest {
         instance = new PersonBean();
         name = "Person Test by Junit";
         email = "junit@tester.com";
+        emailPersonTwo = "secondperson@junitester.com";
         MongoClient mongo = MongoUtil.getMongoConnection();
         Morphia morphia = new Morphia();
         morphia.map(Person.class);
@@ -75,6 +77,22 @@ public class PersonBeanTest {
         assertEquals(result, expResult);
     }
 
+    
+    /**
+     * Test of subscribe method, of class PersonBean.
+     */
+    @Ignore
+    public void testSubscribePersonTwo_Sucess() {
+        String expResult = emailPersonTwo;
+        instance.setName(name);
+        instance.setEmail(expResult);
+        instance.subscribe();
+
+        Person queryByEmail = pdao.queryByEmail(emailPersonTwo);
+        String result = queryByEmail.getEmail();
+        assertEquals(result, expResult);
+    }    
+    
     /**
      * Test of subscribe method, of class PersonBean.
      */
@@ -104,6 +122,22 @@ public class PersonBeanTest {
         instance.unsubscribe();
         
         Person result = pdao.queryByEmail(email);
+        assertEquals(result, expResult);   
+    }
+    
+    
+    /**
+     * Test of unsubscribe method, of class PersonBean.
+     */
+    @Test
+    public void testUnsubscribePersonTwo_Sucess() {
+        Person expResult = null;
+        
+        instance.setName(name);
+        instance.setEmail(emailPersonTwo);
+        instance.unsubscribe();
+        
+        Person result = pdao.queryByEmail(emailPersonTwo);
         assertEquals(result, expResult);   
     }
 
