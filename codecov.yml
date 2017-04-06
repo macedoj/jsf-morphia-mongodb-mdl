@@ -1,5 +1,6 @@
 #
 # This codecov.yml is the configuration for github.com/JulianoR/simple-jsf-morphia-mdl
+# Codecov docs: https://docs.codecov.io/docs/codecov-yaml
 # 
 codecov:
   branch: master  # override the default branch
@@ -10,8 +11,8 @@ codecov:
     delay: 5               # number of seconds to wait between ci build checks
  
 coverage:
-  precision: 2  # 2 = xx.xx%, 0 = xx%
-  round: nearest # default down
+  precision: 5  # 2 = xx.xx%, 0 = xx%
+  round: up # default down
   range: "50...100"
 
   status:
