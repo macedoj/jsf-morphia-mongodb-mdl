@@ -10,7 +10,7 @@ A simple web application built with JavaServer Faces (JSF), Morphia, MongoDB and
 * GlassFish Server 4.1.1 or higher
 
 **Dependencies**
-[![Dependency Status](https://www.versioneye.com/user/projects/58e5a8f924ef3e003b526e2f/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58e5a8f924ef3e003b526e2f)
+* [![Dependency Status](https://www.versioneye.com/user/projects/58e5a8f924ef3e003b526e2f/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58e5a8f924ef3e003b526e2f)
 
 *Project dependencies are up to date in pom.xml file. But if you see the versioneye tell something like "out of date", click on there and pay attention what dependency is outdated. :thumbsup:*
 
