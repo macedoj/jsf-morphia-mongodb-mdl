@@ -6,12 +6,12 @@ The project contains a simple web application with some basic features like emai
 * [![codecov](https://codecov.io/gh/macedoj/jsf-morphia-mongodb-mdl/branch/master/graph/badge.svg)](https://codecov.io/gh/macedoj/jsf-morphia-mongodb-mdl)
 
 **Dependencies**
-* [![Dependency Status](https://www.versioneye.com/user/projects/58e5a8f924ef3e003b526e2f/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58e5a8f924ef3e003b526e2f)
+* [![Dependency Status](https://www.versioneye.com/user/projects/59c6108d6725bd1213879adb/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59c6108d6725bd1213879adb)
 
 *All project dependencies are up to date in pom.xml file. But if you see the versioneye with a message like 'out of date' or 'insecure', click in there in order to check which dependencies are outdated.* :thumbsup: 
 
 **License**
 * [![License (MIT)](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://opensource.org/licenses/MIT)
   
-Copyright 2016, Juliano Macedo.
+Copyright 2016-2017, Juliano Macedo.
 See LICENSE file for details.
