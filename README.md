@@ -4,6 +4,7 @@ The project contains a simple web application with some basic features like emai
 **Project Status**
 * [![Build Status](https://travis-ci.org/macedoj/jsf-morphia-mongodb-mdl.svg?branch=master)](https://travis-ci.org/macedoj/jsf-morphia-mongodb-mdl)
 * [![codecov](https://codecov.io/gh/macedoj/jsf-morphia-mongodb-mdl/branch/master/graph/badge.svg)](https://codecov.io/gh/macedoj/jsf-morphia-mongodb-mdl)
+* [![Ebert](https://ebertapp.io/github/macedoj/jsf-morphia-mongodb-mdl.svg)](https://ebertapp.io/github/macedoj/jsf-morphia-mongodb-mdl)
 
 **Dependencies**
 * [![Dependency Status](https://www.versioneye.com/user/projects/59c6108d6725bd1213879adb/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59c6108d6725bd1213879adb)
