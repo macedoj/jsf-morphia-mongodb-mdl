@@ -11,19 +11,17 @@
  */
 
 
-/*
- * global  $:false 
- */ 
+/*eslint-env jquery*/
 $(document).ready(function () {
-    $('subscribe').hide();
-    
-    $('#btnshowsubscribe').click(function () {
-      $('#subscribe').slideToggle(1000);
-    });
-
-    window.paceOptions = {
-      restartOnPushState: true,
-      startOnPageLoad: true,
-      ajax: true
-    };
+  $('subscribe').hide();
+  
+  $('#btnshowsubscribe').click(function () {
+    $('#subscribe').slideToggle(1000);
+  });
+  
+  window.paceOptions = {
+    restartOnPushState: true,
+    startOnPageLoad: true,
+    ajax: true
+  };
 });
